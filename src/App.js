@@ -10,8 +10,7 @@ function App() {
         <h1>Task Tracker</h1>
         <nav>
           <Link to={"/"}>Home Page</Link> |
-          <Link to={"/tasks"}>Task List Page</Link> |
-          <Link to={"/tasks/:1"}>Task Details Page</Link>
+          <Link to={"/tasks"}>Task List Page</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
