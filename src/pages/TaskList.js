@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import '../TaskList.css';  // Import the CSS file
 
 function TaskList() {
 
@@ -58,24 +59,29 @@ function TaskList() {
     }
 
     return (
-        <div>
+        <div className="task-list-container">
             <h2>Task List</h2>
             <p>This is where all the tasks are shown.</p>
 
             <ul>
                 {taskItems.map((task) => (
-                    <li key={task.id}>
-                        {task.title} |
-                        <Link to={`/tasks/${task.id}`}> View Details</Link> |
-                        <label htmlFor={`taskItem${task.id}`}> Completed</label>
-                        <input type="checkbox"
-                               id={`taskItem${task.id}`}
-                               name={`taskItem${task.id}`}
-                               checked={task.isCompleted}
-                               onChange={() => handleCheckboxChange(task.id)}
-                        />
+                    <li key={task.id} className={`task-item ${task.isCompleted ? 'completed' : ''}`}>
+                        <span className="task-title">{task.title}</span> |
+                        <Link to={`/tasks/${task.id}`}>View Details</Link> |
+                        <label htmlFor={`taskItem${task.id}`}>Completed</label>
+                        <input 
+                            type="checkbox"
+                            id={`taskItem${task.id}`}
+                            name={`taskItem${task.id}`}
+                            checked={task.isCompleted}
+                            onChange={() => handleCheckboxChange(task.id)}
+                        /> |
+                        <div class="editDeleteBtnsContainer">
+                            <button type="button" class="editBtn">Edit</button>
+                            <button type="button" class="deleteBtn">Delete</button>
+                        </div>                      
                     </li>
-                ))}
+                ))} 
             </ul>
         </div>
     );

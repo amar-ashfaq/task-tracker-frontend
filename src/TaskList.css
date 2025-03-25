@@ -1,0 +1,87 @@
+/* Container for the task list page */
+.task-list-container {
+  width: 80%; /* Limits the width of the container */
+  max-width: 1200px; /* Optional: Optional max width for larger screens */
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Task list item styles */
+.task-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Strikethrough for completed tasks */
+.task-item.completed {
+  text-decoration: line-through;
+  background-color: #f0f0f0;
+}
+
+/* Title styling */
+.task-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Link to view task details */
+.task-item a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.task-item a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the checkbox */
+input[type="checkbox"] {
+  margin-left: 10px;
+  transform: scale(1.2);  /* Make the checkbox larger */
+}
+
+/* Additional styles for the page */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+}
+
+p {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.editDeleteBtnsContainer {
+  display: flex;
+  gap: 10px; /* Adds space between the buttons */
+}
+
+.editBtn {
+  background-color: orange;
+}
+
+.editBtn:hover {
+  background-color: rgb(201, 132, 3);
+}
+
+.deleteBtn {
+  background-color: red;
+}
+
+.deleteBtn:hover {
+  background-color: rgb(180, 5, 5);
+}
+
+.editBtn, .deleteBtn {
+  padding: 5px 10px; /* Optional: You can adjust padding as needed */
+}

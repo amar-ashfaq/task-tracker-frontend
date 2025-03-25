@@ -1,0 +1,51 @@
+/* App-wide styling */
+.app-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Header styling */
+  .app-title {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Navigation bar styling */
+  .nav-bar {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .nav-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .separator {
+    margin: 0 10px;
+    color: #555;
+  }
+  
+  /* Additional styling for better visuals */
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
